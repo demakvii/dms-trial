@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+</head>
+<style type="text/css">
+
+
+</style>
+<body>
+<header-bar/>
+ <div id="wrapper">
+<div id="content-wrapper">
+<div class="container-fluid">
+	 <div class="card">
+	 	<div class="card-header">Supplier Form</div>
+	 	<div class="card-body">
+	 		<form ng-submit="add()">
+	 			<div class="form-group">
+	 				<div class="col-md-8">
+	 				<label for="name">Name / Organization Name</label>
+	 				<input type="text" class="form-control" placeholder="Name as on Aadhar card" required="required">
+	 				</div>
+	 			</div>
+	 			<div class="form-group">
+	 				<div class="col-md-8">
+	 				<label for="name">Mobile Number</label>
+	 				<input type="text" class="form-control" placeholder="Enter Mobile No." required="required">
+	 				</div>
+	 			</div>
+	 			<div class="form-group">
+	 				<div class="col-md-8">
+	 				<label for="name">Office Contact No.</label>
+	 				<input type="text" class="form-control" placeholder="Enter Office Contact No." required="required">
+	 				</div>
+	 			</div>
+	 			<div class="form-group">
+	 				<div class="col-md-8">
+	 				<label for="name">Aadhar No.</label>
+	 				<input type="text" class="form-control" placeholder="Enter Aadhar Card No." required="required">
+	 				</div>
+	 			</div>
+	 			<div class="form-group">
+	 				<div class="col-md-8">
+	 				<label for="name">Role</label>
+	 				<select class="form-control" required="required">
+	 					<option value="">Please Select</option>
+	 					<option value="MD">Main Dairy</option>
+	 					<option value="CP">Chiling Plants</option>
+	 					<option value="LC">Local Collters</option>
+	 					<option value="FR">Farmers or Milkmen</option>
+	 				</select>
+	 				</div>
+	 			</div>
+	 			<div class="form-group">
+	 				<div class="col-md-8">
+	 				<label for="name">Email</label>
+	 				<input type="email" class="form-control" placeholder="Enter Email" required="required">
+	 				</div>
+	 			</div>
+	 			<div class="form-group">
+	 				<div class="col-md-8">
+	 				<label for="name">Password</label>
+	 				<input type="password" class="form-control" placeholder="Enter Password" required="required">
+	 				</div>
+	 			</div>
+	 			<div class="form-group">
+	 				<div class="col-md-8">
+	 				<label for="name">Repeat Password</label>
+	 				<input type="password" class="form-control" placeholder="Repeat Password" required="required">
+	 				</div>
+	 			</div>
+	 			<div class="form-group">
+	 				<div class="col-md-8">
+	 				<input type="button" ng-click="back()" value="Back" class="btn btn-danger">
+	 				<input type="submit" value="Add" class="btn btn-success">
+	 			</div>
+	 			</div>
+	 		</form>
+	 	</div>
+	 </div>
+</div>
+</div>
+</div>
+<footer-bar/>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+</head>
+<style type="text/css">
+
+
+</style>
+<body>
+<header-bar/>
+ <div id="wrapper">
+<div id="content-wrapper">
+<div class="container-fluid">
+<br> <br>
+	<div class="text-center"><h1>Welcome {{activeUser.userName}}!</h1></div>
+	<div><hr width="100%" class="hr-custom"/></div>
+	<div class="text-center"><h4>Manage your task easily from here!</h4></div>
+<br> <br>	
+<!-- Icon Cards-->
+     <div class="row">
+       <div class="col-xl-3 col-sm-6 mb-3">
+         <div class="card text-white bg-primary o-hidden h-100">
+           <div class="card-body">
+             <div class="card-body-icon">
+               <i class="fas fa-fw fa-comments"></i>
+             </div>
+             <div class="mr-5">Pending my Task (10)</div>
+           </div>
+           <a class="card-footer text-white clearfix small z-1" href="#/pendingMyTasks">
+             <span class="float-left">View Details</span>
+             <span class="float-right">
+               <i class="fas fa-angle-right"></i>
+             </span>
+           </a>
+         </div>
+       </div>
+       <div class="col-xl-3 col-sm-6 mb-3">
+         <div class="card text-white bg-warning o-hidden  ">
+           <div class="card-body">
+             <div class="card-body-icon">
+               <i class="fas fa-fw fa-list"></i>
+             </div>
+             <div class="mr-5">Pending Tasks (11)</div>
+           </div>
+           <a class="card-footer text-white clearfix small z-1" href="#/pendingTasks">
+             <span class="float-left">View Details</span>
+             <span class="float-right">
+               <i class="fas fa-angle-right"></i>
+             </span>
+           </a>
+         </div>
+       </div>
+       <div class="col-xl-3 col-sm-6 mb-3">
+         <div class="card text-white bg-success o-hidden h-100">
+           <div class="card-body">
+             <div class="card-body-icon">
+               <i class="fas fa-fw fa-shopping-cart"></i>
+             </div>
+             <div class="mr-5">Approved Tasks (5)</div>
+           </div>
+           <a class="card-footer text-white clearfix small z-1" href="#/approvedTasks">
+             <span class="float-left">View Details</span>
+             <span class="float-right">
+               <i class="fas fa-angle-right"></i>
+             </span>
+           </a>
+         </div>
+       </div>
+       <div class="col-xl-3 col-sm-6 mb-3">
+         <div class="card text-white bg-danger o-hidden h-100">
+           <div class="card-body">
+             <div class="card-body-icon">
+               <i class="fas fa-fw fa-life-ring"></i>
+             </div>
+             <div class="mr-5">Rejected Tasks (21)</div>
+           </div>
+           <a class="card-footer text-white clearfix small z-1" href="#/rejectedTasks">
+             <span class="float-left">View Details</span>
+             <span class="float-right">
+               <i class="fas fa-angle-right"></i>
+             </span>
+           </a>
+         </div>
+       </div>
+     </div> 
+</div>
+</div>
+</div>
+<footer-bar/>
+</body>
+</html>

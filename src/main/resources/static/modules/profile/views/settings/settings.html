@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+</head>
+<style type="text/css">
+
+
+</style>
+<body>
+<header-bar/>
+ <div id="wrapper">
+<div id="content-wrapper">
+<div class="container-fluid">
+	 <div class="card">
+	 	<div class="card-header">Profile</div>
+	 	<div class="card-body">
+	 		<form ng-submit="update()">
+	 			<div class="form-group">
+	 				<div class="col-md-8">
+	 				<label for="name">Name / Organization Name</label>
+	 				<input type="text" ng-model="customer.name" class="form-control" required="required" ng-disabled="!page.editMode" placeholder="Name as on Aadhar card">
+	 				</div>
+	 			</div>
+	 			<div class="form-group">
+	 				<div class="col-md-8">
+	 				<label for="name">Mobile Number</label>
+	 				<input type="tel" ng-model="customer.mobNo" class="form-control" required="required" ng-disabled="!page.editMode" placeholder="Enter Mobile No.">
+	 				</div>
+	 			</div>
+	 			<div class="form-group">
+	 				<div class="col-md-8">
+	 				<label for="name">Office Contact No.</label>
+	 				<input type="tel" ng-model="customer.ofcMobNo" class="form-control" required="required" ng-disabled="!page.editMode" placeholder="Enter Office Contact No.">
+	 				</div>
+	 			</div>
+	 			<div class="form-group">
+	 				<div class="col-md-8">
+	 				<label for="name">Aadhar No.</label>
+	 				<input type="text" ng-model="customer.aadharNo" class="form-control" required="required" placeholder="Enter Aadhar Card No." disabled="disabled">
+	 				</div>
+	 			</div>
+	 			<div class="form-group">
+	 				<div class="col-md-8">
+	 				<label for="name">Role</label>
+	 				<select class="form-control" ng-model="customer.role"  disabled="disabled">
+	 					<option value="">Please Select</option>
+	 					<option value="MD" >Main Dairy</option>
+	 					<option value="SA" >System Admin</option>
+	 					<option value="CP">Chiling Plants</option>
+	 					<option value="LC">Local Collters</option>
+	 					<option value="FR">Farmers or Milkmen</option>
+	 				</select>
+	 				</div>
+	 			</div>
+	 			<div class="form-group">
+	 				<div class="col-md-8">
+	 				<label for="name">Email</label>
+	 				<input type="email" class="form-control" ng-model="customer.email" required="required" ng-disabled="!page.editMode" placeholder="Enter Email">
+	 				</div>
+	 			</div>
+	 			<div class="form-group">
+	 				<div class="col-md-8">
+	 				<input type="button" value="Back" class="btn btn-danger" ng-click="back()">
+	 				<input type="button" value="Edit" ng-click="page.editMode = true" class="btn btn-success" ng-show="!page.editMode">
+	 				<input type="submit" value="Update" class="btn btn-success" ng-show="page.editMode">
+	 			</div>
+	 			</div>
+	 		</form>
+	 	</div>
+	 </div>
+</div>
+</div>
+</div>
+<footer-bar/>
+</body>
+</html>
