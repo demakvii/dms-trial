@@ -19,4 +19,4 @@ http://192.168.0.105:8080/dms
 ##For more detail structure read instruction manual located at dms-trial/release/trial/Instruction with flow.docx##
 
 ##For development
-Run build maven using pom.xml to get all required dependecies
+Run build maven using pom.xml to get all required dependencies
