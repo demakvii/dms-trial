@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+ <header-bar/>
+  <!-- end post-wrapper-top -->
+
+  <section class="section1">
+    <div class="container clearfix">
+      <div class="content col-lg-12 col-md-12 col-sm-12 clearfix">
+       <welcome-info>
+       </welcome-info>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <h4 class="title">
+                    	<span>Login</span>
+                    </h4>
+          <form id="form" name="form" ng-submit="login()">
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                <input type="text" name="username" class="form-control" placeholder="Username" required="required" ng-model="user.username">
+              </div>
+               <div class="input-group">
+              	<span ng-show="form.username.$dirty&&form.username.$touched&&form.username.$error.required" style="color:red;">User name is required</span>
+              	</div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                <input type="password" name="password" class="form-control" required="required" placeholder="Password" ng-model="user.password">
+              </div>
+              <span ng-show="form.password.$dirty&&form.password.$touched&&form.password.$error.required" style="color:red;">Password is required</span>
+            </div>
+            <div class="form-group">
+              <div class="checkbox">
+                <label>
+									<input type="checkbox"> Remember me
+								</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-success">Login</button>
+              <button type="button" ng-click="forgetPassword()" class="btn btn-primary">Forget Password</button>
+            </div>
+          </form>
+        </div>
+        <!-- end login -->
+      </div>
+      <!-- end content -->
+    </div>
+    <!-- end container -->
+  </section>
+  <!-- end section -->
+
+ <footer-bar>
+ </footer-bar>
+
+</body>
+</html>

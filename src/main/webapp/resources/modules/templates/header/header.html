@@ -1,0 +1,62 @@
+<span>
+<header class="header" id="headerBar">
+    <div class="container">
+      <div class="site-header clearfix">
+        <div class="col-lg-3 col-md-3 col-sm-12 title-area">
+          <div class="site-title" id="title">
+            <a href="#/home" title="">
+              <h4><img src="/resources/img/sonai.jpg"/ width="30px;">&nbsp;&nbsp;&nbsp;SONAI<div><span style="">Dairy Management System</span></div></h4>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-9 col-md-12 col-sm-12" ng-show="app.showMenu" jet-menu-elem-ready="{{page.currentMenu}}">
+          <div id="nav" class="right affix-top" style="float:right;">
+            <div class="container clearfix">
+              <ul id="jetmenu" class="jetmenu blue">
+                <li id="home"><a href="{{baseHref}}/home">Home</a>
+                </li>
+                <li id="maintainListing"><a href="">Maintain Listing</a>
+                  <ul class="dropdown megamenu">
+                    <li><a href="{{baseHref}}/suppliers">Manage User</a></li>
+                    <li><a href="{{baseHref}}/parameters">Parameters</a></li>
+                  </ul>
+                </li>
+                <li id="process"><a href="">Process</a>
+                  <ul class="dropdown">
+                    <li><a href="{{baseHref}}/manageUpload">Manage Upload</a></li>
+                    <li><a href="{{baseHref}}/viewPricing">View Pricing</a></li>
+                  </ul>
+                </li>
+                <li id="profile"><a href="">{{activeUser.userName}} <span style="color:blue;">(Admin)</span><i class="fas fa-user-circle fa-fw"></i></a>
+                  <ul class="dropdown">
+                    <li><a href="{{baseHref}}/settings">Settings</a></li>
+                    <li><a href="{{baseHref}}/changePassword">Change Password</a></li>
+                    <li><a href="{{baseHref}}/logout">Logout</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- nav -->
+        </div>
+      </div>
+      <!-- site header -->
+    </div>
+    <!-- end container -->
+</header>
+<section class="post-wrapper-top">
+    <div class="container">
+    <div class="site-header clearfix">
+      <div class="col-lg-9 col-md-3 col-sm-12 title-area">
+        <h2>{{app.title}}</h2>
+      </div>
+        </div>
+        <!-- title area -->
+      </div>
+    </div>
+            <!-- title area -->
+         
+      <!-- site header -->
+    
+</section>
+</span>
