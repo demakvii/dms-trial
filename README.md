@@ -22,5 +22,7 @@ http://192.168.0.105:8080/dms
 Run build maven using pom.xml to get all required dependencies
 
 ##If Maven is install use directly as below
+
 mvnw clean install
+
 mvnw spring-boot:run
