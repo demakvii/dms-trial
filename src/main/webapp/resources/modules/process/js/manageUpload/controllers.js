@@ -18,6 +18,7 @@ process.controller('ManageUploadListCtrl', ['$scope', '$location', '$cookieStore
 		currentMenu :"process",
 		columns:[		
 		{id:"date",name:"Date",type:"text",searchMode:true},
+		{id:"time",name:"Time",type:"text",searchMode:true},
 		{id:"uniqueId",name:"Unique ID",type:"text",searchMode:true},
 		{id:"typeOfLogin",name:"Type of Login",type:"text",searchMode:true},
 		{id:"firstName",name:"First Name",type:"text",searchMode:true},
@@ -29,9 +30,9 @@ process.controller('ManageUploadListCtrl', ['$scope', '$location', '$cookieStore
 		{id:"action",name:"Action",type:"link",searchMode:false}
 	],
 	data:[
-		{date:"16/12/2018",uniqueId:"8918989899",typeOfLogin:"FC",firstName:"Mayur",lastName:"kalekar"
+		{date:"16/12/2018",time:"08:30AM",uniqueId:"8918989899",typeOfLogin:"FC",firstName:"Mayur",lastName:"kalekar"
 			,contactNo:"99878932389",address:"Lodhivali",shift:"M",quantityOfMilk:"10",action:actions},
-		{date:"16/12/2018",uniqueId:"8989899",typeOfLogin:"LC",firstName:"Akshay",lastName:"Dhonde"
+		{date:"16/12/2018",time:"10:30PM",uniqueId:"8989899",typeOfLogin:"LC",firstName:"Akshay",lastName:"Dhonde"
 				,contactNo:"2325466",address:"Kharghar",shift:"E",quantityOfMilk:"50",action:actions}
 	]
 	

@@ -19,6 +19,7 @@ process.controller('ViewPricingListCtrl', ['$scope', '$location', '$cookieStore'
 			isDownloadEnabled : false,
 			columns:[		
 			{id:"date",name:"Date",type:"text",searchMode:true},
+			{id:"time",name:"Time",type:"text",searchMode:true},
 			{id:"uniqueId",name:"Unique ID",type:"text",searchMode:true},
 			{id:"typeOfLogin",name:"Type of Login",type:"text",searchMode:true},
 			{id:"firstName",name:"First Name",type:"text",searchMode:true},
@@ -46,6 +47,7 @@ process.controller('ViewPricingListCtrl', ['$scope', '$location', '$cookieStore'
 				isDownloadEnabled : true,
 				columns:[		
 				{id:"date",name:"Date",type:"text",searchMode:true},
+				{id:"time",name:"Time",type:"text",searchMode:true},
 				{id:"uniqueId",name:"Unique ID",type:"text",searchMode:true},
 				{id:"typeOfLogin",name:"Type of Login",type:"text",searchMode:true},
 				{id:"firstName",name:"First Name",type:"text",searchMode:true},
@@ -60,10 +62,10 @@ process.controller('ViewPricingListCtrl', ['$scope', '$location', '$cookieStore'
 				{id:"action",name:"Action",type:"link",searchMode:false}
 			],
 			data:[
-				{date:"16/12/2018",uniqueId:"8918989899",typeOfLogin:"FC",firstName:"Mayur",lastName:"kalekar"
+				{date:"16/12/2018",time:"11:30AM",uniqueId:"8918989899",typeOfLogin:"FC",firstName:"Mayur",lastName:"kalekar"
 					,contactNo:"99878932389",address:"Lodhivali",shift:"M",quantityOfMilk:"10"
 					,amtToBePaid:"170",currentRatePLitre:"18",deductions:"10",action:actions},
-				{date:"18/12/2018",uniqueId:"8918989899",typeOfLogin:"FC",firstName:"Mayur",lastName:"kalekar"
+				{date:"18/12/2018",time:"07:30PM",uniqueId:"8918989899",typeOfLogin:"FC",firstName:"Mayur",lastName:"kalekar"
 						,contactNo:"99878932389",address:"Lodhivali",shift:"E",quantityOfMilk:"50"
 						,amtToBePaid:"570",currentRatePLitre:"18",deductions:"0",action:actions}
 			]
