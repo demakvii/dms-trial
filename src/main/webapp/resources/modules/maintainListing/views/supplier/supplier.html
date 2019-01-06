@@ -15,7 +15,7 @@
 	 <div class="card">
 	 	<div class="card-header">Supplier Form</div>
 	 	<div class="card-body">
-	 		<form ng-submit="add()">
+	 		<form ng-submit="add()" id="form" name="form">
 	 			<div class="form-group">
 	 				<div class="col-md-8">
 	 				<label for="name">Name / Organization Name</label>
@@ -36,20 +36,20 @@
 	 			</div>
 	 			<div class="form-group">
 	 				<div class="col-md-8">
-	 				<label for="name">Aadhar No.</label>
-	 				<input type="text" class="form-control" placeholder="Enter Aadhar Card No." required="required">
-	 				</div>
-	 			</div>
-	 			<div class="form-group">
-	 				<div class="col-md-8">
 	 				<label for="name">Role</label>
-	 				<select class="form-control" required="required">
+	 				<select class="form-control" required="required" ng-model="suppiler.role">
 	 					<option value="">Please Select</option>
 	 					<option value="MD">Main Dairy</option>
 	 					<option value="CP">Chiling Plants</option>
 	 					<option value="LC">Local Collters</option>
 	 					<option value="FR">Farmers or Milkmen</option>
 	 				</select>
+	 				</div>
+	 			</div>
+	 			<div class="form-group">
+	 				<div class="col-md-8">
+	 				<label for="name"><span ng-show="suppiler.role != 'MD'">Aadhar No.</span><span ng-show="suppiler.role == 'MD'">Registration No</span></label>
+	 				<input type="text" class="form-control" placeholder="{{suppiler.role=='MD'?'Enter Registration No.':'Enter Aadhar Card No.'}}" required="required">
 	 				</div>
 	 			</div>
 	 			<div class="form-group">
