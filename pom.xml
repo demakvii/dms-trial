@@ -10,9 +10,9 @@
 	</parent>
 	<groupId>com.org.dms</groupId>
 	<artifactId>dms-trial</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version><!-- Increase version with new build  -->
 	<name>dms-trial</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Dairy Management System</description>
 
 	<properties>
 		<java.version>1.8</java.version>
