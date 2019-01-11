@@ -4,8 +4,8 @@ angular.module('Home', ['Database']);
 angular.module('MaintainListing',['Database']);
 angular.module('Process',['Database']);
 angular.module('TaskList',['Database']);
-angular.module('Profile',['Database']);
-var dmsApp = angular.module('DMSApp', ['Authentication', 'ngRoute', 'Home','MaintainListing','Process','TaskList','Profile', 'ngCookies']);
+angular.module('DairyListing',['Database']);
+var dmsApp = angular.module('DMSApp', ['Authentication', 'ngRoute', 'Home','MaintainListing','Process','TaskList','Profile', 'DairyListing','ngCookies']);
 
 dmsApp.constant('baseHref','dms#');
 dmsApp.run(function($rootScope,baseHref){
@@ -83,6 +83,30 @@ dmsApp.config(['$routeProvider','$locationProvider', function($routeProvider,$lo
             controller: 'LoginCtrl',
             templateUrl: 'resources/modules/authentication/views/login.html'
         })
+        .when('/dairyListing', {
+        	controller : 'DairyListCtrl',
+        	templateUrl : 'resources/modules/dairyListing/views/dairyList.html'
+        })
+        .when('/dairyDetailHome', {
+        	controller : 'DairyDetailHomeCtrl',
+        	templateUrl : 'resources/modules/dairyListing/view/dairyDetailHome.html'
+        })
+        /*.when('/mainDairyDetail', {
+        	controller : 'MainDairyDetailCtrl',
+        	templateUrl : 'resources/modules/dairyListing/views/mainDairyDetail.html'
+        })
+        .when('/chillingPlantDetail', {
+        	controller : 'ChillingPlantDetailCtrl',
+        	templateUrl : 'resources/modules/dairyListing/views/chillingPlantDetail.html'
+        })
+        .when('/localCollectorDetail', {
+        	controller : 'LocalCollectorDetailCtrl',
+        	templateUrl : 'resources/modules/dairyListing/views/localCollectorDetail.html'
+        })
+        .when('/milkmanDetail', {
+        	controller : 'MilkmanDetailCtrl',
+        	templateUrl : 'resources/modules/dairyListing/views/milkmanDetail.html'
+        })*/
         
        .otherwise({ redirectTo: '/login' });
     
