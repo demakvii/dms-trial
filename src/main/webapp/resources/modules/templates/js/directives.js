@@ -95,3 +95,12 @@ dmsApp.directive( 'customTableElemReady', function( $parse ) {
 	       }
 	    }
 	});
+
+dmsApp.directive('governmentListingHeader',function(){
+
+	return {
+		restrict : 'E',
+		replace: 'false',
+		templateUrl : 'resources/modules/templates/header/govheader.html'
+	}
+});

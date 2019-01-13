@@ -9,7 +9,7 @@ dairyList.controller('DairyListCtrl', [ '$scope', '$location',
 			
 			var actions = [ {
 				name : "View",
-				action : "#/dairyDetailHome"
+				action : "dms#/pendingMyTasks"
 			}];
 
 			$scope.sort = function(sortKey) {
