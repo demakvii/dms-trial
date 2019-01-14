@@ -90,24 +90,24 @@ dmsApp.config(['$routeProvider','$locationProvider', function($routeProvider,$lo
         })
         .when('/dairyDetailHome', {
         	controller : 'DairyDetailHomeCtrl',
-        	templateUrl : 'resources/modules/dairyListing/view/dairyDetailHome.html'
+        	templateUrl : 'resources/modules/dairyListing/views/dairyDetailHome.html'
         })
-        /*.when('/mainDairyDetail', {
+        .when('/mainDairyDetail', {
         	controller : 'MainDairyDetailCtrl',
-        	templateUrl : 'resources/modules/dairyListing/views/mainDairyDetail.html'
+        	templateUrl : 'resources/modules/dairyListing/views/govListingDairyTaskList.html'
         })
         .when('/chillingPlantDetail', {
         	controller : 'ChillingPlantDetailCtrl',
-        	templateUrl : 'resources/modules/dairyListing/views/chillingPlantDetail.html'
+        	templateUrl : 'resources/modules/dairyListing/views/govListingDairyTaskList.html'
         })
         .when('/localCollectorDetail', {
         	controller : 'LocalCollectorDetailCtrl',
-        	templateUrl : 'resources/modules/dairyListing/views/localCollectorDetail.html'
+        	templateUrl : 'resources/modules/dairyListing/views/govListingDairyTaskList.html'
         })
         .when('/milkmanDetail', {
         	controller : 'MilkmanDetailCtrl',
-        	templateUrl : 'resources/modules/dairyListing/views/milkmanDetail.html'
-        })*/
+        	templateUrl : 'resources/modules/dairyListing/views/govListingDairyTaskList.html'
+        })
         
        .otherwise({ redirectTo: '/login' });
     

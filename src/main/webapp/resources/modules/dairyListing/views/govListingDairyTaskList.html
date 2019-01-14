@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+</head>
+<style type="text/css">
+
+
+</style>
+<body>
+<government-listing-header/>
+<div id="wrapper">
+<div id="content-wrapper">
+<div class="container-fluid">
+	<div class="wrapper">
+<div class="container-fluid">
+<div class="card mb-3">
+	<div class="card-header">
+		<i class="fas fa-table"></i> {{page.name}}
+	</div>
+	<div class="wrapper">
+	<div class="container-fluid">
+    	<form style="padding:10px;" ng-submit="submit()">
+    		<div class="form-group">
+    			<div class="form-row">
+    				<div class="col-md-2">
+    					<div class="form-label-group">
+            				<input type="date" class="form-control" required="required">
+    						<label >From</label>
+    					</div>
+    				</div>
+    				<div class="col-md-2">
+    					<div class="form-label-group">
+            				<input type="date" class="form-control"  required="required">
+    						<label >To</label>
+    					</div>
+    				</div>
+    				<div class="col-md-6 col-sm-12">
+    					<div class="button-group">
+            				<input type="submit" value="Submit" class="btn btn-primary">
+            				<input type="button" value="Download all" class="btn btn-success" ng-disabled="!page.isDownloadEnabled">
+    					</div>
+    					</div>
+    				</div>
+    				<div class="col-md-2">
+    					<div class="form-label-group">
+            				<a href="{{baseHref}}dairyDetailHome">Back</a>
+    					</div>
+    				</div>
+    		</div>
+    	</form>
+   </div>
+   </div> 
+	<div class="card-body table-responsive">
+		<table class="table table-striped table-hover">
+			<thead>
+				<tr>
+					<th ng-repeat="column in page.columns"  id="{{column.id}}">
+					<span ng-switch="column.type">	
+						<span ng-switch-when="link">
+							<span>{{column.name}}</span>
+						</span>
+						<span ng-switch-default>
+							<span ng-click="sort(column.id)">{{column.name}}</span>
+							<span class="glyphicon sort-icon" ng-show="sortKey==column.id" ng-class="{'glyphicon-arrow-up':reverse,'glyphicon-arrow-down':!reverse}"></span>
+						</span>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-show="(page.data|filter:search).length!=0" ng-repeat="item in page.data|orderBy:sortKey:reverse|filter:search">
+					<td ng-repeat="column in page.columns">
+					<span ng-switch="column.type">	
+						<span ng-switch-when="link">
+							<span ng-repeat="actionItem in item[column.id]">
+								<span ng-show="item[column.id].length > ($index + 1) ">
+								<a href="{{actionItem.action}}">{{actionItem.name}}/</a>
+								</span>
+								<span ng-show="item[column.id].length <= ($index + 1) ">
+								<a href="{{actionItem.action}}">{{actionItem.name}}</a>
+								</span>
+							</span>
+						</span>
+						<span ng-switch-default>
+						{{item[column.id]}}
+						</span>
+					</span>
+					</td>
+				</tr>
+			</tbody>
+		
+		</table>
+	</div>
+	<div ng-show="(page.data|filter:search).length==0" style="text-align:center">
+					No data to display
+	</div>
+	<div class="wrapper">
+	<div class="container-fluid">
+	<nav aria-label="Page navigation" style="float:right;">
+  <ul class="pagination justify-content-end">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1">Previous</a>
+    </li>
+    <li class="page-item disabled"><a class="page-link" href="#">1</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">2</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">3</a></li>
+    <li class="page-item disabled">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer-bar/>
+</body>
+</html>
